@@ -1,0 +1,326 @@
+/*Container*/
+html {
+  height: 100vh;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #dbddfc;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+.container {
+  display: flex;
+  margin: 0 auto;
+  width: 1324px;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 6px 2px silver;
+}
+
+.primary-container {
+  height: 100%;
+  background-color: white;
+  flex: 5;
+  display: flex;
+  align-items: stretch;
+}
+
+.primary-container-area {
+  padding: 40px 70px;
+  width: 100%;
+}
+
+.secondary-container {
+  display: flex;
+  flex: 5;
+  align-items: stretch;
+}
+
+.banner-image-area {
+  width: 100%;
+  box-sizing: border-box;
+}
+.banner-image-area > img {
+  width: 100%;
+  height: 100%;
+}
+
+/*Flex CSS*/
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+}
+
+.d-flex {
+  display: flex;
+}
+
+/*Button*/
+.btn {
+  padding: 12px 48px;
+  background-color: transparent;
+  outline: none;
+  border-radius: 100px;
+  border: none;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+.btn-transparent {
+  border: 1px solid silver;
+}
+
+.btn-primary {
+  background-color: #4e39e5;
+  color: white;
+  font-weight: normal;
+}
+
+.google-sign-in {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/*Form elements*/
+.form-group {
+  margin: 22px 0;
+}
+
+.form-group > .input-element {
+  margin: 6px 0;
+}
+
+.input-box {
+  width: 100%;
+  outline: none;
+  padding: 12px;
+  border-radius: 50px;
+  border: 1px solid silver;
+  box-sizing: border-box;
+}
+
+.input-box:focus {
+  outline: none;
+}
+
+label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/*Spacing*/
+.w-100 {
+  width: 100%;
+}
+
+/**Anchor Tag*/
+a {
+  text-decoration: none;
+}
+
+.sign-in-message {
+  font-size: 12px;
+  font-weight: 500;
+  color: black;
+}
+
+.copyright-message {
+  color: #828282;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/*Checkbox*/
+.checkbox-container {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  padding-top: 2px;
+  font-size: 16px;
+  padding-left: 40px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #ffffff;
+  border: 1px solid #4e39e5;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #efefef;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #4e39e5;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.terms-condition {
+  margin-left: 6px;
+}
+
+/*Margin*/
+
+.sm-top {
+  margin-top: 28px;
+}
+
+.signup-alt-message {
+  overflow: hidden;
+  text-align: center;
+  font-size: 12px;
+  margin: 32px 0;
+  color: #acacac;
+}
+
+.signup-alt-message:before,
+.signup-alt-message:after {
+  background-color: #acacac;
+  content: "";
+  display: inline-block;
+  height: 0.5px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.signup-alt-message:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.signup-alt-message:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+footer {
+  margin-top: 60px;
+}
+
+/*Media queries for 1250 screen*/
+@media only screen and (max-width: 1250px) {
+  .container {
+    width: 100%;
+    padding: 10%;
+    box-shadow: none;
+  }
+
+  .header-short-description {
+    font-size: 14px;
+  }
+  .secondary-container {
+    display: none;
+  }
+  .checkbox-container {
+    font-size: 11px;
+  }
+
+  .primary-container-area {
+    padding: 46px;
+  }
+
+  .sign-in-message {
+    text-align: center;
+  }
+}
+
+/*Media queries for 518 screen*/
+@media (max-width: 518px) {
+  body {
+    background-color: #fff;
+  }
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .header-short-description {
+    font-size: 12px;
+  }
+  .secondary-container {
+    display: none;
+  }
+  .checkbox-container {
+    font-size: 11px;
+  }
+
+  .primary-container-area {
+    padding: 18px;
+  }
+
+  .btn {
+    padding: 12px 22px;
+  }
+  footer {
+    text-align: center;
+  }
+}
+
+/*Media queries for 250 screen*/
+@media (max-width: 250px) {
+  .container {
+    width: 320px;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+}
